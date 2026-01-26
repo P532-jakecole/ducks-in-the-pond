@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DuckDemo.Views.MainWindow"
+        Title="DuckDemo"
+        Width="500" Height="400"
+        Background="LightBlue">
+    <StackPanel Margin="10" Spacing="10">
+        <!-- Buttons for each duck -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <Button Name="MallardButton" Content="Show Mallard Duck" Width="150"/>
+            <Button Name="RedheadButton" Content="Show Redhead Duck" Width="150"/>
+        </StackPanel>
+
+        <!-- TextBlock to display output -->
+        <TextBlock Name="OutputTextBlock"
+                   Text="Click a button to see a duck!"
+                   TextWrapping="Wrap"
+                   Background="Black"
+                   Padding="10"
+                   MinHeight="200"/>
+    </StackPanel>
+</Window>
+
