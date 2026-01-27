@@ -6,6 +6,8 @@ namespace DuckDemo.Models
         public MallardDuck()
         {
             Name = "Mallard Duck";
+            flyBehavior = new FlyWithWings();
+            quackBehavior = new Quack();
         }
 
         public override string Display()

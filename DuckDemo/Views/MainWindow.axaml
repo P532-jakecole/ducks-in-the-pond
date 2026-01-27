@@ -2,22 +2,47 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="DuckDemo.Views.MainWindow"
         Title="DuckDemo"
-        Width="500" Height="400"
+        Width="1000" Height="600"
         Background="LightBlue">
     <StackPanel Margin="10" Spacing="10">
         <!-- Buttons for each duck -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
             <Button Name="MallardButton" Content="Show Mallard Duck" Width="150"/>
             <Button Name="RedheadButton" Content="Show Redhead Duck" Width="150"/>
+            <Button Name="RubberButton" Content="Show Rubber Duck" Width="150"/>
+            <Button Name="DecoyButton" Content="Show Decoy Duck" Width="150"/>
         </StackPanel>
 
         <!-- TextBlock to display output -->
         <TextBlock Name="OutputTextBlock"
                    Text="Click a button to see a duck!"
                    TextWrapping="Wrap"
-                   Background="Black"
+                   Background="White"
                    Padding="10"
                    MinHeight="200"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Spacing="10">
+                <TextBox x:Name="MallardDuckQuack" Watermark="Set Mallard Duck Quack" Width="200"/>
+                <TextBox x:Name="MallardDuckFly" Watermark="Set Mallard Duck Fly" Width="200"/>
+                <Button Name="SetMallard" Content="Click to set Mallard" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Spacing="10">
+                <TextBox x:Name="RedheadDuckQuack" Watermark="Set Mallard Duck Quack" Width="200"/>
+                <TextBox x:Name="RedheadDuckFly" Watermark="Set Mallard Duck Fly" Width="200"/>
+                <Button Name="SetRedhead" Content="Click to set Redhead" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Spacing="10">
+                <TextBox x:Name="RubberDuckQuack" Watermark="Set Mallard Duck Quack" Width="200"/>
+                <TextBox x:Name="RubberDuckFly" Watermark="Set Mallard Duck Fly" Width="200"/>
+                <Button Name="SetRubber" Content="Click to set Rubber" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Spacing="10">
+                <TextBox x:Name="DecoyDuckQuack" Watermark="Set Mallard Duck Quack" Width="200"/>
+                <TextBox x:Name="DecoyDuckFly" Watermark="Set Mallard Duck Fly" Width="200"/>
+                <Button Name="SetDecoy" Content="Click to set Decoy" Width="200"/>
+            </StackPanel>
+        </StackPanel>
     </StackPanel>
 </Window>
 

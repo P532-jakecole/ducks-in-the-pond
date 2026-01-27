@@ -72,3 +72,4 @@
 /workspaces/DucksInPond/DuckDemo/obj/Debug/net9.0/DuckDemo.csproj.Up2Date
 /workspaces/DucksInPond/DuckDemo/obj/Debug/net9.0/DuckDemo.genruntimeconfig.cache
 /workspaces/DucksInPond/DuckDemo/obj/Debug/net9.0/ref/DuckDemo.dll
+/workspaces/DucksInPond/DuckDemo/obj/Debug/net9.0/DuckDemo.sourcelink.json
