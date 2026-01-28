@@ -76,9 +76,9 @@ namespace DuckDemo.Models
     public abstract class Duck
     {
         public string Name { get; protected set; } = "Duck";
-        public FlyBehavior flyBehavior { get; set; }= new FlyWithWings();
+        public FlyBehavior flyBehavior;
 
-        public QuackBehavior quackBehavior { get; set; } = new Quack();
+        public QuackBehavior quackBehavior;
 
         public virtual string performQuack()
         {
@@ -94,32 +94,14 @@ namespace DuckDemo.Models
             return "I am swimming.";
         }
 
-        public virtual void setFlyBehavior(String flyBehav)
+        public virtual void setFlyBehavior(FlyBehavior flyBehav)
         {
-            if (flyBehav.Equals("Wings"))
-            {
-                flyBehavior = new FlyWithWings();
-            }
-            else
-            {
-                flyBehavior = new FlyNoWings();
-            }
+            flyBehavior = flyBehav;
         }
 
-        public virtual void setQuackBehavior(String quackBehav)
+        public virtual void setQuackBehavior(QuackBehavior quackBehav)
         {
-            if (quackBehav.Equals("Quack"))
-            {
-                quackBehavior = new Quack();
-            }
-            else if (quackBehav.Equals("Squeak"))
-            {
-                quackBehavior = new Squeak();
-            }
-            else
-            {
-                quackBehavior = new MuteQuack();
-            }
+            quackBehavior = quackBehav;   
         }
 
         // Polymorphic method overridden by subclasses

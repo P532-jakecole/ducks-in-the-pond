@@ -51,11 +51,33 @@ public partial class MainWindow : Window
 
         if (quackInput.Length >= 1)
         {
-            duck.setQuackBehavior(quackInput);
+            QuackBehavior quackBeh;
+            if (quackInput.Equals("Quack"))
+            {
+                quackBeh = new Quack();
+            }
+            else if (quackInput.Equals("Squeak"))
+            {
+                quackBeh = new Squeak();
+            }
+            else
+            {
+                quackBeh = new MuteQuack();
+            }
+            duck.setQuackBehavior(quackBeh);
         }
         if (flyInput.Length >= 1)
         {
-            duck.setFlyBehavior(flyInput);
+            FlyBehavior flyBeh;
+            if (flyInput.Equals("Wings"))
+            {
+                flyBeh = new FlyWithWings();
+            }
+            else
+            {
+                flyBeh = new FlyNoWings();
+            }
+            duck.setFlyBehavior(flyBeh);
         }
     }
 }

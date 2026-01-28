@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DuckDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2410c379f0ca74d0049b615a2624533b8a18b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+043b2b0a0cb2fed14c8ccfd2bb8824d829ab4650")]
 [assembly: System.Reflection.AssemblyProductAttribute("DuckDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DuckDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
