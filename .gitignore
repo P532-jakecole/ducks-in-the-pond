@@ -1,0 +1,64 @@
+# ===============================
+# .NET / C# generated files (recursive)
+# ===============================
+**/bin/
+**/obj/
+**/*.dll
+**/*.exe
+**/*.pdb
+**/*.mdb
+**/*.log
+**/*.vspscc
+**/*.user
+**/*.userosscache
+**/*.suo
+**/*.cache
+**/*.ide
+
+# ===============================
+# Visual Studio Code
+# ===============================
+.vscode/
+.history/
+*.code-workspace
+
+# ===============================
+# Dev Containers / Docker
+# ===============================
+.devcontainer/
+Dockerfile
+docker-compose*.yml
+
+# ===============================
+# Avalonia / UI framework
+# ===============================
+**/*.xaml.g.cs
+**/*.xaml.cs
+**/*.resources
+**/*.Designer.cs
+
+# ===============================
+# OS generated files
+# ===============================
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===============================
+# Rider / JetBrains IDE
+# ===============================
+.idea/
+
+# ===============================
+# NuGet packages
+# ===============================
+**/*.nupkg
+**/packages/
+**/project.lock.json
+**/project.fragment.lock.json
+**/artifacts/
+**/.nuget/
+**/obj/**/*.nuget.g.props
+**/obj/**/*.nuget.g.targets

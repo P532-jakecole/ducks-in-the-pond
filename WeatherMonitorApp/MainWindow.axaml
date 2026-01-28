@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="WeatherMonitorApp.MainWindow"
+        Width="300" Height="200"
+        Title="Weather Monitoring App">
+
+  <StackPanel Margin="10" Spacing="10">
+    <TextBlock Text="Current Conditions" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+    <TextBlock Name="TemperatureText" Text="Temperature: -- °C" FontSize="14"/>
+    <TextBlock Name="HumidityText" Text="Humidity: -- %" FontSize="14"/>
+    <TextBlock Name="PressureText" Text="Pressure: -- hPa" FontSize="14"/>
+    <Button Name="RefreshButton" Content="Refresh" HorizontalAlignment="Center"/>
+  </StackPanel>
+</Window>
+
