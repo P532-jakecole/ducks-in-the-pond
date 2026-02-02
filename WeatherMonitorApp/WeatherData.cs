@@ -1,8 +1,28 @@
+using System;
+using System.Linq;
+using Avalonia.Metadata;
+using System.Collections.Generic;
+
 public class WeatherData
 {
-    public double Temperature { get; set; }
-    public double Humidity { get; set; }
-    public double Pressure { get; set; }
+    public double Temperature;
+    public double Humidity;
+    public double Pressure;
+
+    public double getTemperature()
+    {
+        return Temperature;
+    }
+
+    public double getHumidity()
+    {
+        return Humidity;
+    }
+    public double getPressure()
+    {
+        return Pressure;
+    }
+
 }
 
 // WeatherStation pulls data from "sensor devices"
@@ -10,14 +30,16 @@ public class WeatherStation
 {
     private Random _random = new Random();
 
-    public WeatherData GetWeatherData()
+    public WeatherData measurementsChanged()
     {
-        // Simulate reading from sensors
-        return new WeatherData
+        WeatherData newData = new WeatherData
         {
-            Temperature = Math.Round(15 + 10 * _random.NextDouble(), 1), // 15–25 °C
+            Temperature = Math.Round(-5 + 30 * _random.NextDouble(), 1), // -5–25 °C
             Humidity = Math.Round(40 + 20 * _random.NextDouble(), 1),    // 40–60 %
-            Pressure = Math.Round(1000 + 20 * _random.NextDouble(), 1)   // 1000–1020 hPa
+            Pressure = Math.Round(1000 + 25 * _random.NextDouble(), 1)   // 1000–1020 hPa
         };
+
+        return newData;
     }
+    
 }

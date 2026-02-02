@@ -1,15 +1,26 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="WeatherMonitorApp.MainWindow"
-        Width="300" Height="200"
+        Width="400" Height="400"
         Title="Weather Monitoring App">
 
   <StackPanel Margin="10" Spacing="10">
-    <TextBlock Text="Current Conditions" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
-    <TextBlock Name="TemperatureText" Text="Temperature: -- °C" FontSize="14"/>
-    <TextBlock Name="HumidityText" Text="Humidity: -- %" FontSize="14"/>
-    <TextBlock Name="PressureText" Text="Pressure: -- hPa" FontSize="14"/>
-    <Button Name="RefreshButton" Content="Refresh" HorizontalAlignment="Center"/>
+    
+    <ContentControl x:Name="DisplayContent"/>
+
+    <StackPanel Orientation="Horizontal" Spacing="10">
+      <Button Name="RefreshButton" Content="Refresh" HorizontalAlignment="Center"/>
+      <Button Name="RemoveButton" Content="Remove Display" HorizontalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Spacing="10">
+      <Button Name="CurrentButton" Content="Current Conditions" HorizontalAlignment="Center"/>
+      <Button Name="StatisticsButton" Content="Stats" HorizontalAlignment="Center"/>
+      <Button Name="ForecastButton" Content="Forecast" HorizontalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Spacing="10">
+      <Button Name="StatisticsAdd" Content="Add Stats" HorizontalAlignment="Center" IsVisible="false" />
+      <Button Name="ForecastAdd" Content="Add Forecast" HorizontalAlignment="Center" IsVisible="false" />
+    </StackPanel>
   </StackPanel>
 </Window>
 

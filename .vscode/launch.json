@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/DuckDemo/bin/Debug/net9.0/DuckDemo.dll",
+            "program": "${workspaceFolder}/WeatherMonitorApp/bin/Debug/net9.0/WeatherMonitorApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/DuckDemo",
+            "cwd": "${workspaceFolder}/WeatherMonitorApp",
             "console": "internalConsole",
             "stopAtEntry": false
         },

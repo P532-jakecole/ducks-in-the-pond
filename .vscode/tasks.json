@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DuckDemo/DuckDemo.csproj",
+                "${workspaceFolder}/WeatherMonitorApp/WeatherMonitorApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/DuckDemo/DuckDemo.csproj",
+                "${workspaceFolder}/WeatherMonitorApp/WeatherMonitorApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/DuckDemo/DuckDemo.csproj"
+                "${workspaceFolder}/WeatherMonitorApp/WeatherMonitorApp.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

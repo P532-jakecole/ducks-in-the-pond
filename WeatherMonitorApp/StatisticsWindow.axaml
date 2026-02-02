@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="WeatherMonitorApp.StatisticsWindow">
+
+  <StackPanel Margin="10" Spacing="10">
+    <TextBlock Text="Weather Stats" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+    <TextBlock Name="AvgTempText" Text="Avg. Temp: -- °C" FontSize="14"/>
+    <TextBlock Name="MinTempText" Text="Min. Temp: -- °C" FontSize="14"/>
+    <TextBlock Name="MaxTempText" Text="Max Temp: -- °C" FontSize="14"/>
+  </StackPanel>
+</UserControl>
