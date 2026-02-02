@@ -14,7 +14,6 @@ namespace WeatherMonitorApp
         private WeatherStation _station = new WeatherStation();
         private StatisticsWindow statWindow;
         private CurrentConditionsWindow currWindow;
-
         private ForecastWindow forecastWindow;
 
         public MainWindow()
@@ -24,6 +23,10 @@ namespace WeatherMonitorApp
             statWindow = new StatisticsWindow(_station);
             currWindow = new CurrentConditionsWindow(_station);
             forecastWindow = new ForecastWindow(_station);
+
+            _station.registerObserver(statWindow);
+            _station.registerObserver(currWindow);
+            _station.registerObserver(forecastWindow);
 
             DisplayContent.Content = currWindow;
 
@@ -100,11 +103,11 @@ namespace WeatherMonitorApp
 
         private void UpdateWeatherDisplay()
         {
-            var data = _station.measurementsChanged();
+            _station.measurementsChanged();
             
-            statWindow.UpdateStatisticsDisplay(data);
-            currWindow.UpdateWeatherDisplay(data);
-            forecastWindow.UpdateForecastDisplay(data);
+            //statWindow.UpdateStatisticsDisplay(data);
+            //currWindow.UpdateWeatherDisplay(data);
+            //forecastWindow.UpdateForecastDisplay(data);
 
         }
     }

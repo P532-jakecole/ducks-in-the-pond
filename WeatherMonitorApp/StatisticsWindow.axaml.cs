@@ -7,7 +7,7 @@ using System.Reflection;
 namespace WeatherMonitorApp
 {
 
-    public partial class StatisticsWindow : UserControl
+    public partial class StatisticsWindow : UserControl, Observer
     {
         private WeatherStation _station = new WeatherStation();
 
@@ -27,7 +27,7 @@ namespace WeatherMonitorApp
 
         }
 
-        public void UpdateStatisticsDisplay(WeatherData data)
+        public void update(WeatherData data)
         {
             double tempData = data.Temperature;
             if (avgCount == 0)

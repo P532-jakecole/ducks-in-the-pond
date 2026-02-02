@@ -7,7 +7,7 @@ using System.Reflection;
 namespace WeatherMonitorApp
 {
 
-    public partial class ForecastWindow : UserControl
+    public partial class ForecastWindow : UserControl, Observer
     {
         private WeatherStation _station = new WeatherStation();
 
@@ -19,7 +19,7 @@ namespace WeatherMonitorApp
 
         }
 
-        public void UpdateForecastDisplay(WeatherData data)
+        public void update(WeatherData data)
         {
             string forecast;
             double pressure = data.getPressure();

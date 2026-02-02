@@ -6,7 +6,7 @@ using System.Linq;
 namespace WeatherMonitorApp
 {
 
-    public partial class CurrentConditionsWindow : UserControl
+    public partial class CurrentConditionsWindow : UserControl, Observer
     {
         private WeatherStation _station = new WeatherStation();
 
@@ -18,7 +18,7 @@ namespace WeatherMonitorApp
 
         }
 
-        public void UpdateWeatherDisplay(WeatherData data)
+        public void update(WeatherData data)
         {
             TemperatureText.Text = $"Temperature: {data.Temperature} °C";
             HumidityText.Text = $"Humidity: {data.Humidity} %";

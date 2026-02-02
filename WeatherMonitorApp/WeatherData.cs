@@ -2,6 +2,9 @@ using System;
 using System.Linq;
 using Avalonia.Metadata;
 using System.Collections.Generic;
+using Avalonia.Controls;
+using Tmds.DBus.Protocol;
+using WeatherMonitorApp;
 
 public class WeatherData
 {
@@ -26,11 +29,13 @@ public class WeatherData
 }
 
 // WeatherStation pulls data from "sensor devices"
-public class WeatherStation
+public class WeatherStation: Subject
 {
     private Random _random = new Random();
 
-    public WeatherData measurementsChanged()
+    List<Observer> subscribedDisplays = new List<Observer>();
+
+    private WeatherData getMeasurements()
     {
         WeatherData newData = new WeatherData
         {
@@ -41,5 +46,27 @@ public class WeatherStation
 
         return newData;
     }
-    
+
+    public void measurementsChanged()
+    {
+        notifyObserver();
+    }
+
+    public void notifyObserver()
+    {
+        var data = getMeasurements();
+        foreach (Observer observer in subscribedDisplays){
+            observer.update(data);
+        }
+    }
+
+    public void registerObserver(Observer observer)
+    {
+        subscribedDisplays.Add(observer);
+    }
+
+    public void removeObserver()
+    {
+        throw new NotImplementedException();
+    }
 }
